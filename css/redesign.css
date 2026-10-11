@@ -1,0 +1,1057 @@
+﻿/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter-variablefont_opsz_wght.ttf') format('truetype');
+}
+
+.touchAction-none {
+    touch-action: none;
+}
+
+.gap-1 {
+    gap: 10px;
+}
+
+.gap-2 {
+    gap: 20px;
+}
+
+.row {
+    row-gap: 24px;
+}
+/*.container {
+    max-width: 1164px;
+}*/
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #DED4DE;
+    font-family: "Inter", "Open Sans", sans-serif;
+    color: #000;
+    touch-action: manipulation;
+}
+
+option:disabled {
+    background-color: #e0e0e0;
+}
+
+.block-overlay {
+    position: relative;
+}
+
+    .block-overlay::after {
+        position: absolute;
+        background-color: #000000;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        border-radius: 5px;
+    }
+
+#main {
+    min-height: 56vh;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.right-bottom {
+    right: 10px;
+    bottom: 10px;
+}
+
+.d-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-between-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-disabled {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.custom-disabled2 {
+    pointer-events: none;
+}
+
+.px-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+i {
+    cursor: pointer;
+    color: #000;
+}
+/*Button color*/
+.btn {
+    border-radius: 26px;
+    color: #fff;
+    text-align: center;
+    padding: 8px 40px;
+    border: none;
+    line-height: 24px;
+    font-family: Inter;
+    font-size: 18px;
+    box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+    background: transparent linear-gradient(110deg, #EF512E 0%, #DE0655 100%);
+    cursor: pointer;
+}
+
+    .btn:hover {
+        color: #fff;
+        background: transparent linear-gradient(249deg, #EF512E 0%, #DE0655 100%);
+    }
+
+.btn-success {
+    color: #fff !important;
+    background: linear-gradient(to right, #28a745, #28a745);
+}
+
+    .btn-success:hover {
+        background: linear-gradient(to left, #28a745, #28a745);
+    }
+
+.btn-loadmore {
+    color: #772397;
+    background: transparent linear-gradient(110deg, #E6DFE6 0%, #E6DFE6 100%);
+}
+
+    .btn-loadmore:hover {
+        color: #772397;
+        background: transparent linear-gradient(110deg, #E6DFE6 0%, #E6DFE6 100%);
+    }
+
+.btn.disabled, .btn:disabled, a.btn.disabled {
+    cursor: no-drop;
+}
+
+h1 {
+    font-family: "Inter";
+    font-weight: 700;
+}
+
+p {
+    font-family: "Inter";
+    overflow-wrap: anywhere;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+a, span {
+    font-family: "Inter";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0px;
+}
+
+input.form-control:focus {
+    outline-style: none;
+    box-shadow: none;
+}
+
+/*Dashboard page design start*/
+.custom-message-box {
+    padding: 16px 30px;
+    box-shadow: 0px 0px 30px #0000001A;
+    border: 1px solid #F8B15D;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    .custom-message-box.warning-box {
+        background-color: #FFF0CC;
+        border-color: #F8B15D;
+    }
+
+    .custom-message-box.danger-box {
+        background-color: #FFDBDB;
+        border-color: #F95668;
+    }
+
+    .custom-message-box.success-box {
+        background-color: #bdffd3;
+        border-color: #00cd30;
+    }
+
+    .custom-message-box .btn-message-close {
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+
+.head {
+    background: #FFFFFF50;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 45%;
+    margin-bottom: 40px;
+}
+
+    .head h1 {
+        color: #772397;
+        font: normal normal bold 34px/38px Inter;
+    }
+
+    .head h3 {
+        font: normal normal bold 24px/24px Inter;
+        color: #535353;
+    }
+
+.bg-shadow {
+    background: #E6DFE6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #0000001A;
+}
+
+.uuu-dashboard .block-overlay {
+    box-shadow: 0 3px 6px #3F3F3F29;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 11%, 0.8) !important;
+    z-index: 1;
+    gap: 10px;
+    cursor: no-drop;
+}
+
+.uuu-dashboard .action-title {
+    font-family: Inter;
+    font-weight: 700;
+    color: #535353;
+    font-size: 28px;
+}
+
+.uuu-dashboard .uuu-fb-overlay-modal {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+    pointer-events: initial;
+    background-color: #000000a6;
+}
+
+    .uuu-dashboard .uuu-fb-overlay-modal .card-body {
+        max-height: 80vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .uuu-dashboard .uuu-fb-overlay-modal .fb-modal-close {
+        top: 5px;
+        right: 5px;
+    }
+
+        .uuu-dashboard .uuu-fb-overlay-modal .fb-modal-close .fa-times-circle {
+            font-size: 27px;
+            color: #E4E4E4;
+        }
+
+.uuu-dashboard .fb-group-item {
+    box-shadow: 0px 0px 10px #0090FF33;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.uuu-discussion-page .group-item > div {
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.uuu-discussion-page .fb-group-item {
+    max-width: 100%;
+}
+
+.uuu-dashboard .fb-group-item h3 {
+    font: normal normal bold 20px/25px Inter;
+    color: #0090FF;
+}
+
+.uuu-dashboard .fb-group-item .btn-join {
+    background: #0090FF;
+    width: 84px;
+    min-width: 84px;
+}
+
+.uuu-dashboard .fb-group-item .btn-visit {
+    background: #D9000D;
+    width: 84px;
+    min-width: 84px;
+}
+
+.uuu-dashboard .collapse-card {
+    background: #FFFFFF;
+    margin-bottom: 16px;
+    box-shadow: 0px 0px 15px #7723971A;
+    border-radius: 10px !important;
+}
+    .uuu-dashboard .collapse-card .exam-item {
+        display: flex;
+    }
+    .uuu-dashboard .uuu-accordion .collapse-card {
+        margin-bottom: 10px;
+    }
+
+.uuu-dashboard .dashboard-routine-item .btn {
+    box-shadow: none;
+}
+
+.uuu-dashboard .collapse-card .btn-header-link img {
+    width: 58px;
+    height: 50px;
+}
+
+.uuu-dashboard .collapse-card .btn-header-link h6 {
+    color: #FC5A5A;
+    font-weight: bold;
+}
+
+.uuu-dashboard .collapse-card .btn-header-link .arrow-icon .fa-chevron-up {
+    font-size: 23px;
+}
+
+.uuu-dashboard .collapse-card .btn-header-link.collapsed .arrow-icon .fa-chevron-up {
+    transform: rotate(180deg);
+}
+
+.uuu-dashboard .arrow-icon {
+    background-color: #fff;
+    box-shadow: 0px 0px 15px #7723971A;
+    height: 48px;
+    width: 48px;
+    min-width: 48px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.uuu-dashboard .collapse-card .btn-header-link .arrow-icon {
+    width: 58px;
+}
+
+.uuu-dashboard .collapse-card .accordion-body {
+    background: #FFFFFF;
+    padding: 20px 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    max-height: 650px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.uuu-dashboard .collapse-card .card-header {
+    background: #EFEFEF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    .uuu-dashboard .collapse-card .card-header h2 {
+        color: #772397;
+        font: normal normal bold 22px/28px Inter;
+        min-height: 56px;
+    }
+
+    .uuu-dashboard .collapse-card .card-header .subject-name {
+        max-width: 65%;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+.uuu-dashboard .collapse-card .badge {
+    background: #11A589;
+    border-radius: 15px;
+    color: #fff;
+    padding: 4px 16px;
+}
+
+.uuu-dashboard .collapse-card .card-header .red-circle {
+    position: absolute;
+    left: -33%;
+    top: 9%;
+    width: 15px;
+    height: 15px;
+}
+
+    .uuu-dashboard .collapse-card .card-header .red-circle::before {
+        content: "";
+        position: relative;
+        display: block;
+        width: 250%;
+        height: 250%;
+        box-sizing: border-box;
+        margin-left: -75%;
+        margin-top: -75%;
+        border-radius: 45px;
+        background-color: #F30000;
+        animation: pulse 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    .uuu-dashboard .collapse-card .card-header .red-circle::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #F30000;
+        border-radius: 50px;
+        animation: circle 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+    }
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.33);
+    }
+
+    80%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.uuu-dashboard .collapse-card .card-body .content {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.uuu-dashboard .collapse-card .card {
+    border-radius: 10px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+    .uuu-dashboard .collapse-card .card .row {
+        row-gap: 20px;
+    }
+
+.uuu-dashboard .collapse-card .accordion-body > .row .col-lg-4.col-md-6 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.uuu-dashboard .collapse-card .card-footer .not-taken {
+    color: #5259FF;
+    font: normal normal medium 15px/18px Inter;
+}
+
+.uuu-dashboard .collapse-card .card-footer .btn {
+    background: transparent linear-gradient(to left, #1D2334, #2E2B82);
+}
+
+    .uuu-dashboard .collapse-card .card-footer .btn:hover {
+        background: transparent linear-gradient(to right, #1D2334, #2E2B82);
+    }
+
+    .uuu-dashboard .collapse-card .card-footer .btn.disabled {
+        background: #D4D4D4;
+        pointer-events: none;
+    }
+
+.uuu-dashboard .btn-menu {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #7723971A;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+    .uuu-dashboard .btn-menu img {
+        width: 48px;
+        min-width: 48px;
+        height: 48px;
+    }
+
+    .uuu-dashboard .btn-menu .fa-chevron-right {
+        font-size: 21px;
+    }
+
+.uuu-dashboard .btn-app-info {
+    background: transparent linear-gradient(to right, #2E2B82, #8524AE);
+    color: #fff;
+    padding: 15px 114px;
+}
+
+    .uuu-dashboard .btn-app-info .btn img {
+        width: 21px;
+        min-width: 21px;
+        max-width: 21px;
+        height: 25px;
+        margin-left: 14px;
+    }
+
+    .uuu-dashboard .btn-app-info .btn {
+        background: #36402b4f 0% 0% no-repeat padding-box;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        padding: 11px 12px;
+    }
+
+.uuu-dashboard .ios-info-div {
+    top: 46px;
+    left: 32px;
+    right: 32px;
+    padding: 20px;
+    background: transparent linear-gradient(50deg, #E2EEFD 0%, #E6F3F1 49%, #E9DFEE 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+    .uuu-dashboard .ios-info-div .btn-ios-info-close {
+        right: 10px;
+        top: 10px;
+    }
+
+        .uuu-dashboard .ios-info-div .btn-ios-info-close img {
+            width: 25px;
+            min-width: 25px;
+            height: 25px;
+        }
+
+    .uuu-dashboard .ios-info-div h6 {
+        border-bottom: 1px solid #2B2B2B;
+        width: fit-content;
+        margin-bottom: 12px;
+    }
+
+    .uuu-dashboard .ios-info-div a {
+        color: #36BF56;
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+        .uuu-dashboard .ios-info-div a img {
+            height: 14px;
+            width: 14px;
+            min-width: 14px;
+            margin-left: 8px;
+        }
+
+.uuu-dashboard .course-and-content {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+    .uuu-dashboard .course-and-content h1 {
+        color: #772397;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .uuu-dashboard .course-and-content h3 {
+        font-size: 24px;
+    }
+
+    .uuu-dashboard .course-and-content .card-body {
+        padding: 40px 15px 30px 15px;
+    }
+
+.uuu-course-page .course-and-content .row {
+    row-gap: 6px;
+}
+
+.uuu-course-page .course-and-content .card-body {
+    padding: 50px 35px 50px 35px;
+}
+
+.uuu-course-page .course-and-content .row .col-xl-4.col-lg-6 {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.uuu-dashboard .help-text-div {
+    width: fit-content;
+}
+
+    .uuu-dashboard .help-text-div h2 {
+        width: fit-content;
+    }
+
+    .uuu-dashboard .help-text-div img {
+        top: 0px;
+        right: -30px;
+        cursor: pointer;
+        width: 22px;
+    }
+
+    .uuu-dashboard .help-text-div .close-icon {
+        top: 2px;
+        right: 2px;
+    }
+
+    .uuu-dashboard .help-text-div .content {
+        min-width: 330px;
+        max-width: 474px;
+        max-height: 300px;
+        box-shadow: 0px 0px 6px #00000029;
+        border-radius: 10px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 20px 30px;
+        top: 23px;
+        left: 10px;
+        z-index: 10;
+    }
+
+.uuu-dashboard .btn-parent-div {
+    max-width: 300px;
+}
+
+.uuu-dashboard .video-and-note {
+    border-radius: 10px;
+}
+
+    .uuu-dashboard .video-and-note .card {
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .uuu-dashboard .video-and-note .col-xl-3.col-lg-4.col-md-6.d-flex a {
+        min-width: -webkit-fill-available;
+        min-width: -moz-available;
+    }
+
+    .uuu-dashboard .video-and-note .col-xl-3.col-lg-4.col-md-6.d-flex .block-overlay a.btn.payDueBtn {
+        min-width: initial;
+    }
+
+    .uuu-dashboard .video-and-note .card-body {
+        padding: 30px;
+    }
+
+    .uuu-dashboard .video-and-note h3 {
+        color: #151515;
+        font: normal normal bold 20px/26px Inter;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        min-height: 52px;
+    }
+
+    .uuu-dashboard .video-and-note .card .card-header, .uuu-dashboard .video-and-note .card img {
+        height: 194px;
+    }
+
+    .uuu-dashboard .video-and-note .card .card-header, .uuu-dashboard .video-and-note .card img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        min-width: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .uuu-dashboard .video-and-note .btn-hover-play {
+        background-color: #772397cc;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+        .uuu-dashboard .video-and-note .btn-hover-play i {
+            font-size: 25px;
+        }
+
+    .uuu-dashboard .video-and-note .card:hover .btn-hover-play {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .uuu-dashboard .video-and-note .card:hover img {
+        transform: scale(1.3);
+        transition: 0.5s;
+    }
+
+    .uuu-dashboard .video-and-note .row .col-lg-4.col-md-6 {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+.uuu-dashboard .display-content-card .card-footer .btn {
+    width: 94px;
+    padding: 3px 10px;
+}
+
+.uuu-dashboard .duration h5, .uuu-dashboard .date-time h5 {
+    font-size: 18px;
+}
+
+.uuu-dashboard .syllabus h5 {
+    font-size: 18px;
+    text-align: left;
+    color: #0059FF;
+}
+
+.uuu-notice-page .notice-item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px #914B9429;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+}
+
+.uuu-notice-page .notice-card {
+    border-radius: 10px;
+}
+
+.uuu-notice-page .notice-item.unread {
+    background: #E4E4E4;
+    border-color: #E4E4E4;
+}
+
+.uuu-celebration .input-data-section .card-body {
+    padding: 40px 20px;
+}
+
+    .uuu-celebration .input-data-section .card-body .fieldset {
+        border-radius: 20px;
+        background-color: #FDFDFD;
+        box-shadow: 0px 0px 6px #914B9429;
+        padding: 10px;
+        /*margin-bottom: 20px;*/
+    }
+
+.uuu-celebration input.form-control, .uuu-celebration select.form-control {
+    box-shadow: 0px 0px 6px #914B9429;
+    border-radius: 10px;
+    border: none;
+    height: 46px;
+}
+
+    .uuu-celebration input.form-control::placeholder {
+        color: #CCCCCC;
+    }
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #F5F5F5;
+}
+
+.uuu-celebration label {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+    .uuu-celebration label.bangla-font {
+        font-family: Inter;
+        font-weight: 600;
+    }
+
+.uuu-celebration .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../img/arrow-circle.png');
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 22px 22px;
+    padding-right: 24px;
+}
+
+.uuu-celebration .image-input-label {
+    background-color: #00BA00;
+    width: 168px;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 6px #914B9429;
+}
+
+.uuu-celebration .label-input-file.form-control {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.uuu-celebration .browse-div .error {
+    position: absolute;
+    top: 50px;
+}
+
+.uuu-celebration .content, .uuu-celebration .content img {
+    width: 148px;
+    height: 148px;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px #914B9429;
+    border-radius: 10px;
+}
+
+    .uuu-celebration .content span {
+        font-size: 15px;
+    }
+
+.uuu-celebration .btn-submit, .uuu-celebration .btn-submit:active, .uuu-celebration .btn-submit:focus {
+    background: #532356;
+    background-color: #532356 !important;
+    box-shadow: none;
+}
+
+.uuu-celebration .confirm-popup-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: #00000054;
+}
+
+    .uuu-celebration .confirm-popup-modal .card {
+        max-width: 500px;
+        min-width: 30vw;
+    }
+
+.uuu-success-info .qr-code {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px #7723971A;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+    .uuu-success-info .qr-code img {
+        max-width: 250px;
+    }
+
+.uuu-success-info .celebration-logo, .uuu-success-info .organization-logo {
+    max-width: 220px;
+}
+
+.uuu-success-info .profile-logo {
+    max-width: 110px;
+    box-shadow: 0px 0px 15px #7723971A;
+    border-radius: 10px;
+}
+
+.uuu-success-info .profile-info h4 {
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 600;
+}
+
+.uuu-success-info .qr-code-parent-div {
+    box-shadow: 0px 0px 15px #7723971A;
+    border-radius: 10px;
+    padding: 46px 10px 30px 10px;
+}
+
+.uuu-success-info .buttons .btn {
+    width: 178px;
+}
+
+.uuu-success-info #downloadAndPrintContent {
+    max-width: 675px;
+    box-shadow: 0px 0px 15px #7723971A;
+    border-radius: 10px;
+    min-width: 32vw;
+}
+
+.uuu-success-info .qr-code-message {
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .uuu-dashboard .course-and-content h3 {
+        font-size: 16px;
+    }
+
+    .uuu-dashboard .btn-app-info {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+        .head h1 {
+            font-size: 24px;
+        }
+
+        .head h3 {
+            font-size: 18px;
+        }
+
+    .uuu-dashboard .help-text-div h2 {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .uuu-dashboard .course-and-content h1 {
+        font-size: 20px;
+    }
+
+    .uuu-dashboard .collapse-card .accordion-body {
+        padding: 10px 15px;
+    }
+
+    .uuu-course-page .course-and-content .card-body {
+        padding: 20px 10px;
+    }
+
+    .uuu-dashboard .video-and-note .card-body {
+        padding: 10px;
+    }
+
+    .uuu-celebration label {
+        font-size: 16px;
+    }
+
+    .uuu-celebration #celebrationForm > .card {
+        background: transparent;
+        border: none;
+    }
+
+        .uuu-celebration #celebrationForm > .card > .card-body {
+            padding: 0px;
+        }
+
+    .uuu-celebration #celebrationForm .card-body .fieldset {
+        padding: 24px 20px;
+    }
+
+    .uuu-celebration .label-input-file {
+        display: none;
+    }
+
+    .uuu-celebration .image-input-label {
+        border-radius: 10px;
+    }
+
+    .uuu-celebration .browse-div {
+        justify-content: center;
+    }
+
+    .uuu-celebration .image-content {
+        display: block !important;
+        text-align: center;
+    }
+
+    .uuu-celebration .image-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .uuu-celebration .confirm-popup-modal .card {
+        max-width: 350px;
+    }
+
+    .uuu-success-info .buttons .btn {
+        width: 122px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .uuu-success-info .qr-code img {
+        max-width: 130px;
+    }
+
+    .uuu-success-info .profile-logo {
+        max-width: 70px;
+    }
+
+    .uuu-success-info .celebration-logo, .uuu-success-info .organization-logo {
+        max-width: 170px;
+    }
+}
+
+@media (max-width: 460px) {
+    .uuu-celebration input::placeholder {
+        font-size: 15px;
+    }
+
+    .uuu-dashboard .btn-app-info {
+        flex-direction: column;
+    }
+
+        .uuu-dashboard .btn-app-info .action-title {
+            margin-bottom: 20px;
+        }
+}
+
+@media (max-width: 360px) {
+    .uuu-celebration input::placeholder {
+        font-size: 13px;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .uuu-dashboard .action-title {
+        font-size: 16px;
+    }
+
+    .uuu-dashboard .btn-menu {
+        padding: 12px 8px !important;
+    }
+
+    .uuu-dashboard .arrow-icon {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .uuu-dashboard .btn-menu img {
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+    }
+}
+/*Dashboard page design end*/

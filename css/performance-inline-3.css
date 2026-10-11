@@ -1,0 +1,190 @@
+/* performance inline styles, part 3 */
+.revision-back-bar {
+        padding: 15px 20px;
+    }
+
+    .revision-back-link {
+        text-decoration: none;
+        color: #52155B;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+        .revision-back-link:hover {
+            color: #804288;
+            text-decoration: none;
+        }
+
+    .revision-exam-header {
+        background: linear-gradient(to right, #804288, #52155B);
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        margin: 5px;
+        border-radius: 10px;
+    }
+
+        .revision-exam-header h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .revision-exam-header .exam-date {
+            color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+    .revision-status-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border-radius: 4px;
+        font-weight: 500;
+        margin: 0 5px;
+    }
+
+    .revision-course-title {
+        color: #52155B !important;
+        font-weight: bold !important;
+    }
+
+    .revision-subtitle {
+        color: #3E4D5C;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .revision-meta {
+        color: #3E4D5C;
+        font-size: 15px;
+    }
+
+    .revision-footer {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .revision-pagination {
+        font-weight: 500;
+        color: #3E4D5C;
+        font-size: 16px;
+    }
+
+    .revision-prev-btn, .revision-next-btn {
+        min-width: 110px;
+        background: linear-gradient(to right, #804288, #52155B);
+        border: none;
+        color: #ffffff;
+    }
+
+        .revision-prev-btn:hover, .revision-next-btn:hover {
+            background: linear-gradient(to left, #804288, #52155B);
+            color: #ffffff;
+        }
+
+        .revision-prev-btn:disabled, .revision-next-btn:disabled {
+            background: #e9ecef;
+            border: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+    .revision-finish-btn {
+        min-width: 110px;
+        background-color: #16A34A;
+        border: none;
+        color: #ffffff;
+    }
+
+        .revision-finish-btn:hover {
+            background-color: #15803d;
+            color: #ffffff;
+        }
+
+        .revision-finish-btn:disabled {
+            background: #e9ecef;
+            border: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+    /* AnsTrue (correct): keep outline circle with letter, show green check next to text */
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsTrue span.input-group-text {
+        background: none !important;
+        background-color: transparent !important;
+        border-color: #94A6B8 !important;
+        color: #94A6B8 !important;
+        font-size: 15px !important;
+    }
+
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsTrue span.input-group-text:before,
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsTrue span.input-group-text:after {
+        display: none !important;
+    }
+
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsTrue .input-group-append.questionTable label {
+        color: #3E4D5C !important;
+    }
+
+    #revisionContent .TakeExamWrapper .questionTable .fa-check {
+        color: #00C024;
+        margin-left: 8px;
+        line-height: 1.3;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* AnsFalse + StudentAns (wrong selected): black filled circle with white letter visible */
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsFalse span.input-group-text,
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .StudentAns span.input-group-text,
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsFalse.StudentAns span.input-group-text {
+        background-color: #000000 !important;
+        background: #000000 !important;
+        border-color: #000000 !important;
+        color: #ffffff !important;
+        font-size: 15px !important;
+    }
+
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsFalse span.input-group-text:before,
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsFalse span.input-group-text:after {
+        display: none !important;
+    }
+
+    #revisionContent .TakeExamWrapper .questionOptions .questionOption .AnsFalse .input-group-append.questionTable label {
+        color: #3E4D5C !important;
+    }
+
+    /* Stats bar darker gray matching screenshot */
+    #revisionContent .uniqueset-question-statistics {
+        background-color: #3F4651 !important;
+        padding: 10px 15px;
+        border-radius: 4px;
+    }
+
+        #revisionContent .uniqueset-question-statistics h6 {
+            background-color: #ffffff;
+            color: #3F4651;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #revisionContent .uniqueset-question-statistics .optionDiv {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+div.uu-footer-top {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
